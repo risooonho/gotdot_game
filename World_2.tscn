@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Jungle_dirt_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Exit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Dirt_auto_tilset.tres" type="TileSet" id=4]
+
+[node name="World_2" type="Node"]
+
+[node name="Manuel_TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Exit" parent="." instance=ExtResource( 3 )]
+position = Vector2( 64, 992 )
+world_scene = "res://World1.tscn"
+
+[node name="auto_TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 2 )
+tile_set = ExtResource( 4 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( 262144, 0, 196608, 262145, 0, 196609, 262146, 0, 196609, 262147, 0, 196609, 262148, 0, 196609, 262149, 0, 196609, 262150, 0, 196609, 262151, 0, 196609, 262152, 0, 196609, 262153, 0, 196609, 262154, 0, 196609, 262155, 0, 196609, 262156, 0, 196609, 262157, 0, 196609, 262158, 0, 196609, 262159, 0, 196609, 262160, 0, 196609, 262161, 0, 196609, 262162, 0, 196609, 262163, 0, 196609, 262164, 0, 196609, 262165, 0, 196609, 262166, 0, 196609, 262167, 0, 196609, 262168, 0, 196609, 262169, 0, 196609, 262170, 0, 196609, 262171, 0, 196609, 262172, 0, 196610, 327710, 0, 196613, 393248, 0, 196613, 458763, 0, 196608, 458764, 0, 196609, 458765, 0, 196609, 458766, 0, 196609, 458767, 0, 196613, 458786, 0, 196613, 524304, 0, 196613, 589841, 0, 196613, 655362, 0, 196608, 655363, 0, 196609, 655364, 0, 196610, 655378, 0, 196613, 655396, 0, 196608, 655397, 0, 196609, 655398, 0, 196609, 655399, 0, 196610, 720915, 0, 196613, 786452, 0, 196613, 786455, 0, 196608, 786456, 0, 196609, 786457, 0, 196609, 786458, 0, 196609, 786459, 0, 196610, 786464, 0, 196608, 786465, 0, 196609, 786466, 0, 196609, 786467, 0, 196609, 786468, 0, 196610, 917504, 0, 196608, 917505, 0, 196610, 1114113, 0, 196608, 1114114, 0, 196609, 1114115, 0, 196609, 1114116, 0, 196610 )
